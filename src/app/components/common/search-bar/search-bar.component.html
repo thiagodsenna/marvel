@@ -1,0 +1,8 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span routerLink="/results/{{ search }}" class="input-group-text btn-search">
+            <i class="bi bi-search"></i>
+        </span>
+    </div>
+    <input type="text" id="search" name="search" class="form-control" placeholder="Pesquisar" [(ngModel)]="search" (keyup.enter)="submitValue()" maxlength="30" autocomplete="off" />
+</div>

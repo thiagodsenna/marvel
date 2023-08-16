@@ -1,0 +1,59 @@
+@import '../../../../variables';
+
+.search-container {
+    background-image: url('../../../../assets/img/marvel_bg_red.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 400px;
+    padding: 30px;
+    text-align: center;
+    border-top: solid 1px #000;
+    border-bottom: solid 8px #9c1515;
+
+    form {
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    p.banner-title {
+        font-size: 80px; 
+        padding-left: 25px; 
+        font-weight: 700; 
+        margin-top: 250px; 
+        color: #f8b16f;
+        text-shadow: 3px 3px #000; 
+        text-align: left;
+
+        span {
+            font-size: 45px;
+            font-weight: 700; 
+            color:#fff; 
+        }
+    }
+}
+
+.content-container {
+    padding: 25px 50px 50px 50px;
+    background-color: #eee;
+    min-height: 700px;
+    text-align: center;
+
+    .msg-container {
+        margin-top: 250px;
+        font-size: 110%;
+        font-weight: 600;
+        color: #999;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    img.loading-img {
+        width: 60px;
+        margin-top: 10px;
+    }
+
+    app-character-card {
+        width: auto;
+        padding: 0;
+    }
+}

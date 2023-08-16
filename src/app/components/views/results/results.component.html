@@ -1,0 +1,24 @@
+<div class="search-container">
+    <p class="banner-title">
+        {{ title }}
+    </p>
+    <button routerLink="/" class="btn btn-primary btn-back">
+        <i class="bi bi-arrow-left-circle-fill"></i>
+        Voltar
+    </button>
+</div>
+
+<div class="content-container col-md-12">
+    <h1>
+        <app-search-results-tag [showSearchTag]="(showSearchTag) ? true : false" [searchTerm]="showSearchTag" [resultsTotal]="pageTotal" [showCloseButton]="false" (callbackFunction)="searchEmpty()"></app-search-results-tag>
+        <app-pagination [pageLimit]="pageLimit" [pageOffset]="pageOffset" [pageTotal]="pageTotal" (callbackFunction)="searchAll($event)"></app-pagination>
+    </h1>
+    
+    <p *ngIf="characters.length == 0 && !isLoading" class="msg-container">{{ noDataFoundMsg }}</p>
+    <p *ngIf="isLoading" class="msg-container">{{ loadingMsg }}</p>
+    <img *ngIf="isLoading" class="loading-img" src="assets/img/loading.gif" />
+
+    <div *ngIf="!isLoading" class="cards-container" class="row">
+        <app-character-card *ngFor="let character of characters" [character]="character"></app-character-card>
+    </div>
+</div>

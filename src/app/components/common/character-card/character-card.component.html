@@ -1,0 +1,12 @@
+<div class="card" [ngClass]="size">
+    <div class="img-card-header">
+        <img [src]="getCharacterImg()" class="banner" alt="titulo" />
+        <a href="#" class="fav-icon" (click)="favorite(character); $event.preventDefault();" title="Adicionar como favorito" [ngClass]="favoriteId == character['id'] ? 'fav-icon-checked' : ''">
+            <i class="bi bi-heart-fill"></i>
+        </a>
+    </div>
+    <div class="card-body">
+        <p class="card-title">{{ character['name'] }}</p>
+        <p class="card-description">{{ (character['description']) ? (character['description']  | substring:0:150) : 'No description' }}</p>
+    </div>
+</div>

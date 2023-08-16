@@ -1,0 +1,19 @@
+<nav>
+    <ul class="pagination pagination-sm justify-content-end">
+        <li class="page-item">
+            <a class="page-link" href="#" (click)="previousPage(); $event.preventDefault();" [ngClass]="(pageNow == 1) ? 'disabled' : ''" title="Página anterior">
+                <i class="bi bi-caret-left-fill"></i>
+            </a>
+        </li>
+        <li class="page-item" *ngFor="let page of pagesToDisplay" [ngClass]="[(page == -1) ? 'disabled' : '', (pageNow == page) ? 'active' : '']">
+            <a class="page-link" href="#" (click)="goToPage(page); $event.preventDefault();">
+                {{ page.toString().replace('-1','...') }}
+            </a>
+        </li>
+        <li class="page-item">
+            <a id="btn-next-page" class="page-link" href="#" (click)="nextPage(); $event.preventDefault();" [ngClass]="(pageNow == getTotalPages()) ? 'disabled' : ''" title="Próxima página">
+                <i class="bi bi-caret-right-fill"></i>
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,40 @@
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+* {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+html, body { 
+    height: 100%; 
+    max-width: 1590px; 
+    margin: auto;
+}
+
+body { 
+    background-color: #666;
+    border-left: solid 1px #000;
+    border-right: solid 1px #000;
+}
+
+//Remove efeito de glow dos elementos bootstrap
+*:hover, *:focus, *:active {
+  outline: none;
+  box-shadow: none !important;
+}
+
+//Popup de mensagens de alerta
+.msg-success {
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-container-color: #28a745;
+    --mdc-snackbar-supporting-text-color: #fff;
+}
+
+.msg-error {
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-container-color: #fc5454;
+    --mdc-snackbar-supporting-text-color: #fff;
+}

@@ -1,0 +1,6 @@
+<div *ngIf="showSearchTag" class="search-tag">
+    {{ resultsTotal }} Resultados para <span>{{ searchTerm }}</span>
+    <a *ngIf="showCloseButton" id="search-tag-close" href="#" (click)="closeTag(); $event.preventDefault();" title="Limpar pesquisa">
+        <i class="bi bi-x-circle"></i>
+    </a>
+</div>

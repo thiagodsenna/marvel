@@ -1,0 +1,28 @@
+@import '../../../../variables';
+
+.search-container {
+    background-image: url('../../../../assets/img/marvel_bg_results.jpg');
+    background-position: center;
+
+    .btn-primary {
+        background-color: $primary-color;
+        border-color: #9c1515;
+        float: left;
+        margin: 15px 0 0 25px;
+        padding: 4px 25px 4px 15px;
+
+        i {
+            margin-right: 7px;
+        }
+    }
+
+    .btn-primary:hover {
+        background-color: #9c1515;
+    }
+
+    p.banner-title {
+        font-size: 65px; 
+        padding-left: 25px; 
+        color:#ffffff; 
+    }
+}

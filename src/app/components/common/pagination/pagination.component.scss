@@ -1,0 +1,33 @@
+@import '../../../../variables';
+
+.pagination
+{
+    li {
+        a {
+            font-size: 90%;
+            color: $primary-color;
+            padding: 0 12px 0 12px;
+            border-color: #DDD;
+
+            i {
+                font-size: 70%;
+                vertical-align: middle;
+            }
+        }
+
+        a.disabled
+        {
+            color: #999 !important;
+            background-color: #EEE;
+        }
+    }
+
+    .active
+    {
+        a {
+            color: #fff;
+            border: solid 1px #b94242 !Important;
+            background-color: $primary-color !Important;
+        }
+    }
+}

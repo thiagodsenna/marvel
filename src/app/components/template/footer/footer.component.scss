@@ -1,0 +1,20 @@
+@import '../../../../variables';
+
+.footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    border-top: solid 1px #000;
+
+    p {
+        font-weight: 400;
+        font-size: 95%;
+        margin: 0 10px 0 0;
+
+        span {
+            color: $primary-color;
+            font-weight: 600;
+        }
+    }
+}

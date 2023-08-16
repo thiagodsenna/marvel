@@ -1,0 +1,23 @@
+<div class="search-container">
+    <form action="#">
+        <app-search-bar [(search)]="search" (callbackFunction)="searchByForm()"></app-search-bar>
+    </form>
+    <p class="banner-title">
+        {{ title }} <span>{{ title2 }}</span>
+    </p>
+</div>
+
+<div class="content-container col-md-12">
+    <h1>
+        <app-search-results-tag [showSearchTag]="(showSearchTag) ? true : false" [searchTerm]="showSearchTag" [resultsTotal]="pageTotal" (callbackFunction)="searchEmpty()"></app-search-results-tag>
+        <app-pagination [pageLimit]="pageLimit" [pageOffset]="pageOffset" [pageTotal]="pageTotal" (callbackFunction)="searchAll($event)"></app-pagination>
+    </h1>
+    
+    <p *ngIf="characters.length == 0 && !isLoading" class="msg-container">{{ noDataFoundMsg }}</p>
+    <p *ngIf="isLoading" class="msg-container">{{ loadingMsg }}</p>
+    <img *ngIf="isLoading" class="loading-img" src="assets/img/loading.gif" />
+
+    <div *ngIf="!isLoading" class="cards-container" class="row">
+        <app-character-card *ngFor="let character of characters" [character]="character"></app-character-card>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+@import '../../../../variables';
+
+div.search-tag {
+    float: left;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    padding: 3px 15px 3px 20px;
+    font-size: 79%;
+    background-color: #fff;
+    color: #999;
+
+    span {
+        color: $primary-color;
+        font-size: 100%;
+        font-weight: 600;
+        padding-left: 2px;
+    }
+
+    a {
+        color: #999;
+        margin-left: 20px;
+
+        i.bi {
+            font-size: 70%;
+        }
+    }
+}

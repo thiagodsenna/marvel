@@ -1,0 +1,24 @@
+@import '../../../../variables';
+
+.input-group-text {
+    color: #fff;
+    background-color: $primary-color;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+
+    .bi {
+        font-size: 120%;
+    }
+}
+
+input {
+    font-size: 120%;
+    font-weight: 500;
+    color: #666;
+    background-color: #eee;
+}
+
+input::placeholder {
+    color: #ccc;
+}
